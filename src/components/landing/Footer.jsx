@@ -83,18 +83,18 @@ export default function Footer() {
             <ul className="space-y-2 text-white/80">
               <li>
                 <a
-                  href="mailto:contact@alia.com"
+                  href="mailto:gaspard.sallerin-gorainoff@alia.team"
                   className="hover:text-[#66c9bf] transition-colors duration-200"
                 >
-                  contact@alia.com
+                  gaspard.sallerin-gorainoff@alia.team
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+33123456789"
+                  href="tel:+33632322164"
                   className="hover:text-[#66c9bf] transition-colors duration-200"
                 >
-                  +33 1 23 45 67 89
+                  +33 6 32 32 21 64
                 </a>
               </li>
               <li className="pt-2">
