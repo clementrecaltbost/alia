@@ -3,30 +3,27 @@ import { Link } from 'react-router-dom';
 const founders = [
   {
     id: 1,
-    name: 'Alexandre Martin',
-    role: 'CEO & Co-fondateur',
-    description: 'Ancien athlète professionnel, Alexandre a créé Alia pour connecter les talents sportifs aux opportunités qu\'ils méritent. Passionné par l\'entrepreneuriat et le sport.',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    linkedin: '#',
-    twitter: '#',
+    name: 'Téo Carilli',
+    role: 'Co-fondateur',
+    description: 'Titulaire d\'un Master 2 en Business Consulting and Digital Organization à l\'Université Paris-Dauphine, Téo est un passionné de sport et marathonien engagé. Animé par l\'envie de rendre le sport accessible à tous, il travaille à connecter les talents sportifs aux opportunités qu\'ils méritent.',
+    avatar: '/assets/teo.jpg',
+    linkedin: 'https://www.linkedin.com/in/téo-carilli-701835228/',
   },
   {
     id: 2,
-    name: 'Sophie Dubois',
-    role: 'CTO & Co-fondatrice',
-    description: 'Ingénieure en informatique avec une passion pour le sport. Sophie développe la technologie qui permet à Alia de connecter efficacement athlètes et entreprises.',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-    linkedin: '#',
-    twitter: '#',
+    name: 'Gaspard Sallerin-Gorainoff',
+    role: 'Co-fondateur',
+    description: 'Diplômé d\'un Bachelor en administration des affaires à HEC Montréal, avec une spécialisation en finance et management, Gaspard est un passionné de sport qui apporte à Alia sa vision analytique. Son objectif : aider chaque athlète à franchir un cap en facilitant l\'accès au soutien dont ils ont besoin.',
+    avatar: '/assets/gaspard.jpg',
+    linkedin: 'https://www.linkedin.com/in/gaspard-sallerin-gorainoff/',
   },
   {
     id: 3,
-    name: 'Thomas Bernard',
-    role: 'CMO & Co-fondateur',
-    description: 'Expert en marketing et communication, Thomas a travaillé avec de nombreuses marques sportives. Il apporte sa vision stratégique pour faire grandir Alia.',
-    avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-    linkedin: '#',
-    twitter: '#',
+    name: 'Nicolas Cimino',
+    role: 'Co-fondateur',
+    description: 'Diplômé d\'un Master 2 en Business Administration and Management à Paris-Dauphine, Nicolas allie son goût pour le sport à une forte sensibilité pour l\'expérience utilisateur. Convaincu que chaque athlète doit pouvoir évoluer dans les meilleures conditions, il contribue à bâtir une plateforme simple, humaine et ambitieuse.',
+    avatar: '/assets/nicolas.jpg',
+    linkedin: 'https://www.linkedin.com/in/nicolas-cimino/',
   },
 ];
 
@@ -81,24 +78,32 @@ export default function TeamSection() {
 
                 {/* Social Links */}
                 <div className="flex justify-center gap-4">
-                  <a
-                    href={founder.linkedin}
-                    className="w-10 h-10 bg-[#0ca99a] rounded-full flex items-center justify-center hover:bg-[#0ba08f] transition-colors duration-300 text-white"
-                    aria-label="LinkedIn"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  </a>
-                  <a
-                    href={founder.twitter}
-                    className="w-10 h-10 bg-[#0ca99a] rounded-full flex items-center justify-center hover:bg-[#0ba08f] transition-colors duration-300 text-white"
-                    aria-label="Twitter"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                    </svg>
-                  </a>
+                  {founder.linkedin && (
+                    <a
+                      href={founder.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-[#0ca99a] rounded-full flex items-center justify-center hover:bg-[#0ba08f] transition-colors duration-300 text-white"
+                      aria-label="LinkedIn"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                    </a>
+                  )}
+                  {founder.twitter && (
+                    <a
+                      href={founder.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-[#0ca99a] rounded-full flex items-center justify-center hover:bg-[#0ba08f] transition-colors duration-300 text-white"
+                      aria-label="Twitter"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -121,5 +126,6 @@ export default function TeamSection() {
     </section>
   );
 }
+
 
 
